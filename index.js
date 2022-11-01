@@ -3,7 +3,7 @@ const path = require("path")
 const http = require("http")
 
 const server = http.createServer((req, res) => {
-  if (req.url === "/home") {
+  if (req.url === "/") {
     let filepath = path.join(__dirname, "Home.html")
     fs.readFile(filepath, "utf8", (err, data) => {
       res.end(data)
